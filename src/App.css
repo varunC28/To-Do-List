@@ -1,0 +1,136 @@
+:root {
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --primary-color: #6200ea;
+  --accent-color: #03dac6;
+  --button-color: #6200ea;
+  --button-text-color: #fff;
+  --input-border-color: #ccc;
+  --input-focus-border-color: #6200ea;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #e1e1e1;
+  --primary-color: #bb86fc;
+  --accent-color: #03dac6;
+  --button-color: #bb86fc;
+  --button-text-color: #000;
+  --input-border-color: #333;
+  --input-focus-border-color: #bb86fc;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+input[type="text"] {
+  width: calc(100% - 85px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: var(--input-focus-border-color);
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--input-border-color);
+}
+
+li span {
+  cursor: pointer;
+}
+
+li button {
+  margin-left: 10px;
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+}
+
+li button:hover {
+  color: var(--primary-color);
+}
+
+.theme-toggle {
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+select {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: var(--input-focus-border-color);
+  outline: none;
+}
+
+.filter-sort-container {
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+}
+
+.TaskInput {
+  display: flex;
+}
